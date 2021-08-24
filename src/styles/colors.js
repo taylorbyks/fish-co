@@ -1,9 +1,10 @@
 export const colors = {
-  primary: '#2F54FF',
+  primary: '#0052b0',
+  title: '#12315b',
   text: '#000',
-  red: '#000',
-  backgroundLight: '#2C285B',
-  backgroundDark: '#1E1D42',
+  red: '#ff4c4c',
+  backgroundLight: '#00e3f7',
+  backgroundDark: '#0098d1',
   grey: '#E5E5E5',
   white: '#FFFFFF',
 }
