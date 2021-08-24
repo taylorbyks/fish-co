@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconButton, Title, Header } from '../../components'
-import { WaterTankList } from '../../components/molecules'
+import { WaterTankCard, WaterTankList } from '../../components/molecules'
 import { HomeContainer } from './styles'
 
 export function Home() {
@@ -16,7 +16,7 @@ export function Home() {
   return (
     <HomeContainer>
       <Header title="Tanques"><IconButton iconName="add"></IconButton></Header>
-    <WaterTankList data={item}/>
+      <WaterTankList data={item}/>
     </HomeContainer>
   )
 }
