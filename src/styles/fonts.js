@@ -1,5 +1,5 @@
 export const fonts = {
-  regular: 'Montserrat_400Regular',
-  semibold: 'Montserrat_600SemiBold',
-  bold: 'Montserrat_700Bold',
+  regular: 'Rubik_400Regular',
+  semibold: 'Rubik_600SemiBold',
+  bold: 'Rubik_700Bold',
 }
