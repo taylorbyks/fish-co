@@ -4,7 +4,6 @@ export const HeaderContainer = styled.View`
   ${({ theme }) => css`
     width: 100%;
     height: ${theme.metrics.px(84)}px;
-    background-color: ${theme.colors.grey};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
