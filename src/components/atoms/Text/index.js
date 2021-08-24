@@ -12,7 +12,7 @@ const BaseText = styled.Text`
 export const Title = styled(BaseText)`
   ${({ theme }) => css`
     font-size: ${theme.metrics.px(28)}px;
-    color: ${theme.colors.text};
+    color: ${theme.colors.title};
     font-family: ${theme.fonts.bold};
   `}
 `
