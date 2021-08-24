@@ -4,8 +4,8 @@ export const HomeContainer = styled.View`
   ${({ theme }) => css`
     flex: 1;
     align-items: center;
-    justify-content: flex-start;
-    padding: ${theme.metrics.px(40)}px ${theme.metrics.px(15)}px ${theme.metrics.px(48)}px;
+    justify-content: space-between;
+    padding: ${theme.metrics.px(134)}px ${theme.metrics.px(15)}px ${theme.metrics.px(134)}px;
   `}
 `
 
