@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Animated } from 'react-native'
+import { View, Animated, StyleSheet } from 'react-native'
 import { Swipeable } from 'react-native-gesture-handler'
 import { WaterTankCardText, WaterTankCardTitle, IconButton } from '../../atoms'
 import { WaterTankContainer } from './styles'
@@ -7,6 +7,7 @@ import { WaterTankContainer } from './styles'
 export const WaterTankCard = ({ data, onPress, onRemove }) => {
   return (
     <Swipeable
+      containerStyle={StyleSheet.create({width: 410})}
       overshootRight={false}
       renderRightActions={() => (
         <Animated.View>
@@ -18,7 +19,7 @@ export const WaterTankCard = ({ data, onPress, onRemove }) => {
     >
       <WaterTankContainer onPress={onPress}>
         <WaterTankCardTitle>{data.name}</WaterTankCardTitle>
-        <WaterTankCardText>Tamanho: {data.size}</WaterTankCardText>
+        <WaterTankCardText>Tamanho: {data.size} m²</WaterTankCardText>
       </WaterTankContainer>
     </Swipeable>
   )
