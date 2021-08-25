@@ -17,9 +17,9 @@ export const Title = styled(BaseText)`
   `}
 `
 
-export const InputLabel = styled(BaseText)`
+export const Label = styled(BaseText)`
   ${({ theme }) => css`
-    font-size: ${theme.metrics.px(14)}px;
+    font-size: ${theme.metrics.px(16)}px;
     color: ${theme.colors.text};
     font-family: ${theme.fonts.semibold};
   `}
@@ -36,7 +36,7 @@ export const InputSectionLabel = styled(BaseText)`
 export const ButtonText = styled(BaseText)`
   ${({ theme }) => css`
     font-size: ${theme.metrics.px(22)}px;
-    color: ${theme.colors.text};
+    color: ${theme.colors.title};
     font-family: ${theme.fonts.bold};
   `}
 `

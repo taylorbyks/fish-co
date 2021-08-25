@@ -5,7 +5,7 @@ export const ButtonContainer = styled.TouchableOpacity`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${theme.colors.backgroundDark};
+    background-color: ${theme.colors.grey};
     border-width: ${theme.metrics.px(2)}px;
     border-color: ${theme.colors.primary};
     border-radius: ${theme.metrics.px(12)}px;
