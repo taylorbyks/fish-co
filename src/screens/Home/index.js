@@ -1,22 +1,19 @@
 import React from 'react'
-import { IconButton, Title, Header } from '../../components'
-import { WaterTankCard, WaterTankList } from '../../components/molecules'
+import { useNavigation } from '@react-navigation/core'
+import { Button, Header } from '../../components'
 import { HomeContainer } from './styles'
 
 export function Home() {
-  const item = [{
-    key: 123,
-    name: "Teste",
-    size: "12313"
-  }, {
-    key: 12,
-    name: "Teste",
-    size: "12313"
-  }]
+  const navigation = useNavigation()
+
+  function handleCreateWaterTank() {
+    navigation.navigate("WaterTanks")
+  }
+
   return (
     <HomeContainer>
-      <Header title="Tanques"><IconButton iconName="add"></IconButton></Header>
-      <WaterTankList data={item}/>
+      <Header title="Fish.co" goBackDisable></Header>
+      <Button text="Tanques" onPress={handleCreateWaterTank} />
     </HomeContainer>
   )
 }
