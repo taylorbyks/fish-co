@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components/native'
 export const HeaderContainer = styled.View`
   ${({ theme }) => css`
     width: 100%;
-    height: ${theme.metrics.px(84)}px;
+    height: ${theme.metrics.px(110)}px;
+    padding: ${theme.metrics.px(60)}px ${theme.metrics.px(15)}px ${theme.metrics.px(5)}px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
