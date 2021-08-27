@@ -7,13 +7,15 @@ export function Home() {
   const navigation = useNavigation()
 
   function handleCreateWaterTank() {
-    navigation.navigate("WaterTanks")
+    navigation.navigate('WaterTanks')
   }
 
   return (
-    <HomeContainer>
+    <>
       <Header title="Fish.co" goBackDisable></Header>
-      <Button text="Tanques" onPress={handleCreateWaterTank} />
-    </HomeContainer>
+      <HomeContainer>
+        <Button text="Tanques" onPress={handleCreateWaterTank} />
+      </HomeContainer>
+    </>
   )
 }

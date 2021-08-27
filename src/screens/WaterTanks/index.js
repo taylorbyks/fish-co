@@ -25,11 +25,13 @@ export function WaterTanks() {
   ]
 
   return (
-    <WaterTanksContainer>
+    <>
       <Header title="Tanques" goBack="Home">
         <IconButton iconName="add" onPress={handleCreateWaterTank}></IconButton>
       </Header>
-      <WaterTankList data={item} />
-    </WaterTanksContainer>
+      <WaterTanksContainer>
+        <WaterTankList data={item} />
+      </WaterTanksContainer>
+    </>
   )
 }
