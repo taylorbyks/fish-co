@@ -1,26 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/core'
 import { Button, InputLabel, Header } from '../../components'
-import { WaterTankContainer } from './styles'
+import { WaterTankContainer, WaterTankFormContainer } from './styles'
 
 export function WaterTank() {
-  const navigation = useNavigation()
-
   const routes = useRoute()
+  const { title, action, tankSize, tankName } = routes.params
+  const [name, setName] = useState(tankName || '')
+  const [size, setSize] = useState(tankSize || '')
 
-  const {
-    title, action, size, name
-  } = routes.params
+  const navigation = useNavigation()
 
   function handleSave() {
     navigation.navigate('WaterTanks')
   }
 
   return (
-    <WaterTankContainer>
+    <>
       <Header title={title} goBack="WaterTanks"></Header>
-      <InputLabel label="Nome:" />
-      <Button text={action} onPress={handleSave} />
-    </WaterTankContainer>
+      <WaterTankContainer>
+        <WaterTankFormContainer>
+          <InputLabel label="Nome:" value={name} setValue={setName} />
+          <InputLabel label="Tamanho:" value={size} setValue={setSize} />
+        </WaterTankFormContainer>
+        <Button text={action} onPress={handleSave} />
+      </WaterTankContainer>
+    </>
   )
 }
