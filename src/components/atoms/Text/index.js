@@ -19,7 +19,7 @@ export const Title = styled(BaseText)`
 
 export const Label = styled(BaseText)`
   ${({ theme }) => css`
-    font-size: ${theme.metrics.px(16)}px;
+    font-size: ${theme.metrics.px(18)}px;
     color: ${theme.colors.text};
     font-family: ${theme.fonts.semibold};
   `}
