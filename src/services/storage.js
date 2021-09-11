@@ -7,10 +7,10 @@ export async function saveTank(tank) {
 
     await AsyncStorage.setItem(
       '@fish.co:tanks',
-      [JSON.stringify({
+      JSON.stringify({
         ...tank,
         ...oldtanks,
-      })]
+      })
     )
   } catch (error) {
     throw new Error(error)

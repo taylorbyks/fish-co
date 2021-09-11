@@ -14,7 +14,7 @@ export function WaterTank() {
 
   async function handleSave() {
     if(name === '' || size == ''){
-
+      console.log('Campos invalidos')
       return
     }
 
