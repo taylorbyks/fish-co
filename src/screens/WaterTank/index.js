@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/core'
 import { Button, InputLabel, Header } from '../../components'
 import { WaterTankContainer, WaterTankFormContainer } from './styles'
+import { saveTank } from '../../services/storage'
 
 export function WaterTank() {
   const routes = useRoute()
@@ -11,7 +12,23 @@ export function WaterTank() {
 
   const navigation = useNavigation()
 
-  function handleSave() {
+  async function handleSave() {
+    if(name === '' || size == ''){
+
+      return
+    }
+
+    const newTank = {
+      name,
+      size
+    }
+
+    try {
+      await saveTank(newTank)
+    } catch (error) {
+      console.log(error)
+    }
+
     navigation.navigate('WaterTanks')
   }
 

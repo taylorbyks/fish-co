@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/core'
 import { IconButton, Header } from '../../components'
 import { WaterTankList } from '../../components/molecules'
 import { WaterTanksContainer } from './styles'
+import { loadTanks } from '../../services/storage'
 
 export function WaterTanks() {
   const navigation = useNavigation()
+  const [tanks, setTanks] = useState([])
 
   function handleCreateWaterTank() {
     navigation.navigate('WaterTank', { title: 'Criar', action: 'Adicionar' })
   }
+
+  useEffect(async () => {
+    try {
+      const tanks = await loadTanks()
+      console.log(tanks)
+    } catch (error) {}
+  }, [])
 
   const item = [
     {
